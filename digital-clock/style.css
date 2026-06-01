@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    /* changed dark color */
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+.main-container{
+    width: 500px;
+    padding: 40px 30px;
+    text-align: center;
+    color: white;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.12);
+
+    /* better shadow style */
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(0, 255, 204, 0.18);
+
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+}
+
+h1{
+    padding-bottom: 30px;
+    font-size: 40px;
+    letter-spacing: 3px;
+}
+
+.clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 20px ;
+    letter-spacing: 2px; 
+}
+
+.clock span{
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.75);
+}
+
+#ampm{
+    font-size: 25px;
+    margin-left: 12px;
+    color: #00ffcc;
+
+    /* small glow for AM/PM */
+    text-shadow: 0 0 12px rgba(0, 255, 204, 0.8);
+}
+
+.date{
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+/* code for responsive */
+@media (max-width: 480px){
+    .main-container{
+        width: 90%;
+        padding: 30px 25px;
+    }
+
+    .clock{
+        font-size: 38px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+    .date{
+        font-size: 15px;
+    }
+}
